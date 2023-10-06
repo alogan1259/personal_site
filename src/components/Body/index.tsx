@@ -28,9 +28,9 @@ const Body = () => {
                             <img className='headshot' src={headshot} alt='Andrew Logan' />
                         </div>
                         <div className="socials">
-                            <a href="https://www.linkedin.com/in/allogan2/" target="_blank"><img src={linkedin} alt="LinkedIn" className='social-logo linkedin-logo' /></a>
-                            <a href="https://github.com/alogan1259" target="_blank"><img src={github} alt="GitHub" className='social-logo github-logo' /></a>
-                            <a href={resumepdf} target="_blank"><img src={resume} alt="Resume" className='social-logo resume-logo' /></a>
+                            <a href="https://www.linkedin.com/in/allogan2/" target="_blank" rel="noreferrer"><img src={linkedin} alt="LinkedIn" className='social-logo linkedin-logo' /></a>
+                            <a href="https://github.com/alogan1259" target="_blank" rel="noreferrer"><img src={github} alt="GitHub" className='social-logo github-logo' /></a>
+                            <a href={resumepdf} target="_blank" rel="noreferrer"><img src={resume} alt="Resume" className='social-logo resume-logo' /></a>
 
                         </div>
                     </div>
