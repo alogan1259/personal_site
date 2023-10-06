@@ -1,0 +1,9 @@
+html {
+  background-color: #1e1e22;
+  color: #dcd9d9;
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+}
+
+/* logo color is 3548D5 for when adding containers and shit */

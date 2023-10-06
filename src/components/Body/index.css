@@ -1,0 +1,335 @@
+.horizontal-line {
+    height: 1px;
+    background-color: white;
+    margin: 0 10%;
+}
+
+/* HOME */
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-bottom: 5%;
+}
+
+.wrapper-home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.wrapper-bio {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.wrapper-headshot {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    height: auto;
+}
+
+.headshot {
+    border: solid #202b7f;
+    max-width: 30vw;
+    min-width: 15rem;
+    height: 100%;
+    border-radius: 50%;
+    margin-top: 1%;
+}
+
+.bio {
+    font-size: 1.5rem;
+    margin-right: 2%;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.headshot-container {
+    max-height: 50%;
+    display: flex;
+    margin-left: 1rem;
+}
+
+.bio-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    min-width: 50%;
+}
+
+.socials img {
+    margin: 1rem;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    float: right;
+}
+
+.linkedin-logo {
+    width: auto;
+    height: 3rem;
+}
+
+.github-logo {
+    width: auto;
+    height: 3rem;
+}
+
+.resume-logo {
+    width: auto;
+    height: 3rem;
+}
+
+/* HOME */
+
+
+/* EXPERIENCE */
+
+.experience {
+    box-sizing: border-box;
+    padding-bottom: 5%;
+    /* background-color: #3d2525; */
+    background-color: #1e1e22;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.header {
+    font-size: 3rem;
+    padding-top: 5%;
+    padding-bottom: 1rem;
+}
+
+.wrapper-experience {
+    /* Add equal padding on the sides */
+    box-sizing: border-box;
+    display: flex;
+    /* Use flex container */
+    flex-wrap: wrap;
+    /* Allow flex items to wrap */
+    gap: 1rem;
+}
+
+.experience-container-epic {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(50% - 0.5rem);
+    margin-bottom: 1rem;
+    text-align: center;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 2%;
+}
+
+.experience-container-epic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/epic-illustration.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5) blur(2px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.experience-container-epic-contents {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.experience-container-usbank {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(50% - 0.5rem);
+    margin-bottom: 1rem;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 2%;
+}
+
+.experience-container-usbank::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/usbank.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5) blur(2px);
+    opacity: 0.7;
+    border-radius: 0;
+    z-index: -1;
+}
+
+.experience-container-usbank-contents {
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.experience-container-usbank-description,
+.experience-container-epic-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    padding: 0.5rem 1rem;
+    width: 80%;
+    /* Adjust the width as needed */
+    transition: opacity 0.3s ease-in;
+}
+
+.experience-container-usbank:hover .experience-container-usbank-contents,
+.experience-container-epic:hover .experience-container-epic-contents {
+    opacity: 0;
+    /* Start with zero opacity */
+}
+
+.experience-container-usbank:hover .experience-container-usbank-description,
+.experience-container-epic:hover .experience-container-epic-description {
+    opacity: 1;
+}
+
+
+/* Media Query for stacking at a certain width */
+@media (max-width: 893px) {
+    .experience-container-epic {
+        width: 100%;
+        /* Full width when stacking */
+    }
+
+    .experience-container-usbank {
+        width: 100%;
+        /* Full width when stacking */
+    }
+}
+
+.position {
+    font-size: 2rem;
+    color: #c9c9c9;
+    text-decoration: none;
+}
+
+.company {
+    font-size: 1.5rem;
+    color: #c9c9c9;
+    text-decoration: none;
+}
+
+.date {
+    color: #919191;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* EXPERIENCE */
+
+
+/* PROJECT */
+
+.projects {
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    background-color: #1e1e22;
+    margin-bottom: 5%;
+}
+
+.wrapper-projects {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.project {
+    background-color: #29292e;
+    border-radius: 5px;
+    padding: 20px;
+    flex-basis: calc(50% - 0.5rem);
+    box-sizing: border-box;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.025);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 893px) {
+    .project {
+        flex-basis: 100%;
+    }
+}
+
+
+.list {
+    list-style-type: square;
+}
+
+/* PROJECT */
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #c9c9c9;
+}
+
+/* FOOTER */
